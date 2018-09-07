@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+	background-image: url("../images/random_grey_variations.png");
+	background-repeat: repeat;
+}
+
+.wrapper {
+	width: 800px;
+	height: 90%;
+	padding: 30px;
+	margin: 30px auto;
+	border: 3px solid black;
+}
+
+header p{
+	font-family: 'Press Start 2P', cursive;
+	height:35px;
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+
+
+
+/* popup message*/
+h1{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 36px;
+}
+#hide-me {
+	font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 105vh;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.2) 0%, rgba(0,0,0,.9) 150%);
+} 
+#hide-me > .message {
+  position: relative;
+  margin: auto;
+  width: 600px;
+  background: #F7F9F3;
+  padding: 2.5em;
+  box-shadow: 0 5px 30px 5px #222;
+  border-radius: 5px;
+}
+.close {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: white;
+  background: black;
+  padding: 5px;
+  border-radius: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.message input[type="text"]{
+	font-family: 'Press Start 2P', cursive;
+	width: 300px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 1.3em;
+	text-indent: 8px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.message input[type="submit"]{
+	font-family: 'Press Start 2P', cursive;
+	width: 130px;
+	height: 35px;
+	border-radius: 5px;
+	font-size: 20px;
+	text-indent: 8px;
+}
+
+.message input[type="submit"]:hover{
+	background-color: black;
+	color: white;
+}
+
+/* end of pop-up msg*/ 
+
+/*score box design*/
+.score-box:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.score-box{
+	font-family: 'Press Start 2P', cursive;
+	margin: -10px 30px ;
+	float: right;
+	height: 90px;
+	width: 100px;
+	border: 2px solid black;
+	background-color: black;
+	color: white;
+	border-radius: 15px;
+}
+
+.score-box h2 {
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.score-box p {
+	font-size: 15px;
+	line-height: 60px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+
+.game-container{
+	height: 78.5vh;
+
+
+}
+.btn-start{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 23px;
+	height: 80px;
+	border-radius: 15px;
+	border: none;
+	margin-left: 25px;
+	width: 250px;
+}
+.btn-start:hover{
+	background-color: black;
+	color: white;
+}
+
+#level-easy,
+#level-hard{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 25px;
+	border-radius: 15px;
+	margin-left: 95px;
+	height: 75px;
+	width: 150px;
+
+}
+#hide{
+	font-family: 'Press Start 2P', cursive;
+	line-height: 50px;
+	margin-left: 50px;
+	font-size: 25px;
+}
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.game{
+	/*position: relative;*/
+	border: 3px solid black;
+	margin: 25px;
+	height: 63vh;
+	background-color: #BADCEA;
+	width: 680px;
+
+}
+
+
+.row{
+	margin: 0 auto;
+	padding: 30px;
+	width: 600px;
+}
+
+.box {
+	width: 130px;
+	height: 120px;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.ball-pic.top {
+	width: 80px;
+	position: absolute;
+	left: 20px;
+	top: -80px;
+	transition:top 0.8s ease-in;
+}
+
+.ball-pic.top.show {
+	top: 0;
+}
+
+.ball-pic.bottom {
+	width: 80px;
+	position: absolute;
+	left: 20px;
+	bottom:-80px;
+	transition:bottom 0.8s ease-in;
+}
+.ball-pic.bottom.show {
+	bottom:0;
+}
+
+.ball-pic.bonked {
+	-webkit-animation-duration: 0.8s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.counter{
+	margin: 20px 312px;
+}
+
+
+footer{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 10px;
+	display: inline-block;
+	position: fixed;
+	margin-left: 250px;
+}
